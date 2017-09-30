@@ -28,6 +28,6 @@ public class PessoaJuridica extends Contribuinte
 		System.out.println("Tipo de Contribuinte: Pessoa Jurídica");
 		System.out.println("Nome: " + super.nome);
 		System.out.println("CNPJ: " + this.cnpj);
-		System.out.println("Valor do imposto de renda = " + nf.format(this.calculaImpostoDeRenda()) + "\n");
+		System.out.println("Valor do imposto de renda: " + nf.format(this.calculaImpostoDeRenda()) + "\n");
 	}
 }

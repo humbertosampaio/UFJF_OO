@@ -42,6 +42,6 @@ public class PessoaFisica extends Contribuinte
 		System.out.println("Tipo de Contribuinte: Pessoa Física");
 		System.out.println("Nome: " + super.nome);
 		System.out.println("CPF: " + this.cpf);
-		System.out.println("Valor do imposto de renda = " + nf.format(this.calculaImpostoDeRenda()) + "\n");
+		System.out.println("Valor do imposto de renda: " + nf.format(this.calculaImpostoDeRenda()) + "\n");
 	}
 }

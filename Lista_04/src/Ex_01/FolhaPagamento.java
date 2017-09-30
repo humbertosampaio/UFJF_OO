@@ -1,37 +1,35 @@
 package Ex_01;
 
-import java.util.Dictionary;
+import java.text.NumberFormat;
 
 public class FolhaPagamento
 {
-	private float salarioFinal;
-	private Funcionario funcionario;
+	private String texto;
 	private String mes;
 	private String ano;
 	
-	public FolhaPagamento(String ano, String mes, Funcionario funcionario)
+	public FolhaPagamento(String ano, String mes)
 	{
-		this.funcionario = funcionario;
+		this.texto = "";
 		this.mes = mes;
 		this.ano = ano;
 	}
 	
-	public String getMes()
-	{
-		return mes;
+	private static String formatar(String s, int length) {
+	    return String.format("%1$-" + length + "s", s);
 	}
 	
-	public String getAno()
+	public void adicionarFuncionario(Funcionario funcionario)
 	{
-		return ano;
-	}
-
-	public float getSalarioFinal()
-	{
-		return salarioFinal;
+		NumberFormat nf = NumberFormat.getCurrencyInstance();
+		if(this.texto != null && !this.texto.isEmpty())
+			this.texto += System.lineSeparator();
+		this.texto += "Funcionário: " + formatar(funcionario.nome, 30) + 
+						"Salário base: " + formatar(nf.format(funcionario.getSalario()), 20) +
+						"Valor: " + nf.format(calculaValor(funcionario));
 	}
 	
-	public float getValorFolhaPagamento(Funcionario funcionario)
+	public float calculaValor(Funcionario funcionario)
 	{
 		float salarioFinal = 0;
 		
@@ -48,12 +46,12 @@ public class FolhaPagamento
 			salarioFinal -= valorHoraDeTrabalho * funcionario.horasDiariasDeTrabalho * funcionario.faltas;
 			salarioFinal += valorHoraDeTrabalho * funcionario.valorHoraExtra * funcionario.horasExtras;
 		}
-
 		return salarioFinal;
 	}
 	
-	public void imprimeDados()
+	public void imprimirFolhaPagamento()
 	{
-		
+		System.out.println("Folha de Pagamento de " + mes + "/" + ano + ":");
+		System.out.println(this.texto + "\n");
 	}
 }

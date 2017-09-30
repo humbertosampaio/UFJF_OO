@@ -1,7 +1,5 @@
 package Ex_01;
 
-import java.text.NumberFormat;
-
 public class Professor extends Funcionario
 {
 	public Professor(String nome, float salarioBase, int faltas, int horasExtras)
@@ -16,13 +14,5 @@ public class Professor extends Funcionario
 	public float getSalario()
 	{
 		return super.salarioBase;
-	}
-	
-	@Override
-	public void imprimirDados()
-	{
-		NumberFormat nf = NumberFormat.getCurrencyInstance();
-		
-		
 	}
 }
