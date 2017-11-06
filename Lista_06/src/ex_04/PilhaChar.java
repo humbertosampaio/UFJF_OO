@@ -38,5 +38,6 @@ public class PilhaChar
 	{
 		while(!pilha.isEmpty())
 			System.out.print(desempilha());
+		System.out.println("\n");
 	}
 }

@@ -28,12 +28,7 @@ public class ListaOrdenadaInt
 		Collections.sort(listaOrd);
 	}
 	
-//	public int get(int index)
-//	{
-//		return listaOrd.get(index);
-//	}
-	
-	// Exercício 04 - Início
+	// Exercício 03 - Início
 	/****************************************
 	 * Insere 25 numeros aleatorios na lista
 	 ****************************************/
@@ -65,5 +60,6 @@ public class ListaOrdenadaInt
 		for(int i = 0; i < listaOrd.size(); i++)
 			System.out.print(listaOrd.get(i) + " ");
 		System.out.println("]");
+		System.out.println();
 	}
 }
