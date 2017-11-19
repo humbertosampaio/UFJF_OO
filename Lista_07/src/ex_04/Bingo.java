@@ -80,9 +80,9 @@ public class Bingo
 			if(!listaVencedores.isEmpty())
 			{
 				if(listaVencedores.size() == 1)
-					System.out.println("Vencedor: Participante " + listaVencedores.get(0));
+					System.out.println("Vencedor: " + listaVencedores.get(0));
 				else
-					System.out.println("Vencedores: Participantes " + listaVencedores.toString());
+					System.out.println("Vencedores: " + listaVencedores.toString());
 			}
 		}
 	}
